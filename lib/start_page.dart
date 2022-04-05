@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it_green/signin.dart';
+import 'package:get_it_green/signup.dart';
 import 'package:lottie/lottie.dart';
 
 
@@ -27,8 +29,8 @@ class MainPage extends StatelessWidget {
                children: [
                  Lottie.network("https://assets2.lottiefiles.com/packages/lf20_BhbCTg.json")
 ,
-                 Padding(
-                   padding: const EdgeInsets.all(8.0),
+                 const Padding(
+                   padding: EdgeInsets.all(8.0),
                    child: Text("Keep It Green ",style: TextStyle(
                        fontFamily: 'Schyler',
                      fontSize: 55,
@@ -37,21 +39,28 @@ class MainPage extends StatelessWidget {
 
                    ),),
                  ),
-                SizedBox(height: 20,)
+                const SizedBox(height: 20,)
                  ,Padding(
                    padding: const EdgeInsets.all(8.0),
-                   child: Container(
+                   child: SizedBox(
                      width: double.infinity
                      ,
                      height: 50,
-                     child: MaterialButton(onPressed: (){},color: Colors.brown[300],
-                       child: Text("Sign In",style: TextStyle(color: Colors.white ,fontSize: 25,fontWeight: FontWeight.bold,
+                     child: MaterialButton(onPressed: (){
+
+                       Navigator.push(
+                         context,
+                         MaterialPageRoute(builder: (context) =>  SignIn()),
+                       );
+
+                     },color: Colors.brown[300],
+                       child: const Text("Sign In",style: TextStyle(color: Colors.white ,fontSize: 25,fontWeight: FontWeight.bold,
                          fontFamily: 'Schyler',),),
                      ),
                    ),
                  ),
-               Padding(
-               padding: const EdgeInsets.all(5.0),
+               const Padding(
+               padding: EdgeInsets.all(5.0),
          child: Text("Or ",style: TextStyle(
              fontSize: 20,
              fontFamily: 'Schyler',
@@ -66,8 +75,16 @@ class MainPage extends StatelessWidget {
                      width: double.infinity
                      ,
                     height: 50,
-                    child: MaterialButton(onPressed: (){},color: Colors.brown[300],
-                     child: Text("Sign up",style: TextStyle(color: Colors.white ,fontSize: 25,fontWeight: FontWeight.bold,
+                    child: MaterialButton(onPressed: (){
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  SignUp()),
+                      );
+
+
+                    },color: Colors.brown[300],
+                     child: const Text("Sign up",style: TextStyle(color: Colors.white ,fontSize: 25,fontWeight: FontWeight.bold,
                        fontFamily: 'Schyler',),),
                      ),
                   ),
