@@ -237,7 +237,7 @@ class Profile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "10",
+                                "4",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 40,
@@ -249,7 +249,7 @@ class Profile extends StatelessWidget {
                                 "Collected",
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 2,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Schyler',
                                 ),
